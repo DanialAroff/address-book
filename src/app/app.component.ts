@@ -20,7 +20,7 @@ export class AppComponent {
       lastName: "",
       email: "danialharith0416@gmail.com",
       phoneNumber: "011-60643317",
-      address: "No 31, Lorong IM 5/11 No 31, Lorong IM 5/11 No 31, Lorong IM 5/11"
+      address: "No 20, Lorong IM 2/11, Bandar Indera Mahkota"
     },
   ];
 

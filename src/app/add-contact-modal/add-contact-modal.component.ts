@@ -49,12 +49,10 @@ export class ContactModalComponent {
       }
 
       this.dialogRef.close({ operation: 'add', contact: this.newContact });
-      console.log('add');
+      console.log('test add');
     } else if (this.operation === 'update') {
-      console.log(this.contactData);
       this.dialogRef.close({ operation: 'update', contact: this.contactData })
     } else if (this.operation === 'delete') {
-      console.log(this.contactData.id);
       this.dialogRef.close({ operation: 'delete', contactId: this.contactData.id });
     } else {
       this.dialogRef.close();

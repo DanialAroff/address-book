@@ -12,27 +12,28 @@
     <!-- <div class="add-contact" >+ New Contact</div> -->
     <div class="main-container">
       <div class="contact-list-container">
-        <div *ngIf="contacts.length == 0" class="no-contact">
-          No contact
+        <div *ngIf="contacts.length === 0; else contactList">
+          <p class="no-contact">No contacts found. Click 'New Contact' to get started.</p>
         </div>
-        <div *ngFor="let contact of contacts;">
-          <div class="contact-container">
-            <div class="contact--name">
-              {{ contact.firstName }} {{ contact.lastName }}
-            </div>
-            <div class="contact--address">
-              {{ contact.address }}
-            </div>
-            <div class="contact--phonenumber">{{ contact.phoneNumber }}</div>
-            <div class="contact--email">{{ contact.email }}</div>
-            <div class="contact--buttons">
-              <div class="contact-update"><button class="btn btn-update-contact" (click)="openModal('update', contact)">Update</button></div>
-              <div class="contact-delete"><button class="btn btn-delete-contact" (click)="openModal('delete', contact)">Delete</button></div>
+
+        <ng-template #contactList>
+          <div *ngFor="let contact of contacts;">
+            <div class="contact-container">
+              <div class="contact--name">
+                {{ contact.firstName }} {{ contact.lastName }}
+              </div>
+              <div class="contact--address">
+                {{ contact.address }}
+              </div>
+              <div class="contact--phonenumber">{{ contact.phoneNumber }}</div>
+              <div class="contact--email">{{ contact.email }}</div>
+              <div class="contact--buttons">
+                <div class="contact-update"><button class="btn btn-update-contact" (click)="openModal('update', contact)">Update</button></div>
+                <div class="contact-delete"><button class="btn btn-delete-contact" (click)="openModal('delete', contact)">Delete</button></div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="contact-details-container">
+        </ng-template>
       </div>
     </div>
 </body>

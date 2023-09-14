@@ -1,5 +1,7 @@
 # Set LF line endings for *.json files
 *.json text eol=lf
+*.ts text eol=lf
+*.html text eol=lf
 
 # Set CRLF line endings for *.txt files
 *.txt text eol=crlf

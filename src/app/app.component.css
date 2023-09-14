@@ -83,6 +83,6 @@ body, input[type="text"], button {
 }
 
 .no-contact {
-  padding: 1rem;
+  padding: 1rem 0;
   color: #676767;
 }
